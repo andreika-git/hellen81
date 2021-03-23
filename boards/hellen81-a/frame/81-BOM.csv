@@ -1,6 +1,6 @@
 Comment,Designator,Footprint,LCSC Part #
 "100n","C1","C0603","C14663"
-"USB-B","J2","CONN-USB-MINI-B",""
+"USB-B","J2","CONN-USB-MINI-B","C91144"
 "Jumper","J3","",""
 "Module:mcu/0.1","M1","",""
 "Module:input/0.1","M2","",""
