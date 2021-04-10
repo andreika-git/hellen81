@@ -1,6 +1,9 @@
 # remove the jumper connection from VCC_PP1 to +5V: we need +12v power supply for push-pull outputs.
 R309,
 
+# remove the pull-up to CRANK
+R216,
+
 # remove +5V pull-ups from SPI1, because we use it with +3.3v accelerometer
 R103,
 R105,
@@ -8,7 +11,18 @@ R105,
 # use STM32H7 mcu
 U105,"STM32H743IIT6","LQFP176","C89597"
 
-# JLC stock adjustments
+# ------- JLC stock adjustments:
+
+# no 1 ohms R2512, we choose 0.5 ohms, no problem
+R2,"0.5","R2512","C27777"
+R3,"0.5","R2512","C27777"
+R4,"0.5","R2512","C27777"
+R5,"0.5","R2512","C27777"
+
+# AP2337->AP2331 (less power, but ok)
 U103,"AP2331TDSA-7","SOT-23","C183303"
 U480,"AP2331TDSA-7","SOT-23","C183303"
-U600,"LMV324IPWR","TSSOP14","C398929"
+# LMR14020->LMR14030 (more power, no problem)
+U420,"LMR14030","SOP8","C182078"
+# no basic in stock -> extended
+U430,"TJA1051T/1J","SO8","C92211"
